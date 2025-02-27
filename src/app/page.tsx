@@ -46,7 +46,7 @@ export default function Home() {
                   创造独特的数字体验
                 </h1>
                 <p className="text-xl text-titanium-600">
-                  设计师 / 开发者 / 创作者
+                  独立开发者
                 </p>
 
                 {/* CTA 按钮 */}
