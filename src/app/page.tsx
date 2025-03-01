@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-primary">
+    <div className="min-h-screen bg-[#E8EDE9]">
       <Navigation />
       <main>
         {/* Hero Section */}
@@ -14,18 +14,18 @@ export default function Home() {
           {/* 柔和的背景 */}
           <div className="absolute inset-0">
             {/* 基础渐变 */}
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary via-primary to-titanium-200" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#F4F6F8] via-[#E8EDE9] to-[#D8E0D9]" />
             
             {/* 高光和阴影效果 */}
             <div className="absolute inset-0">
               {/* 主要高光区域 */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-secondary/90 to-transparent transform -skew-x-12" />
-              <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-secondary/80 to-transparent transform skew-y-12" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#F4F6F8]/90 to-transparent transform -skew-x-12" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-[#F4F6F8]/80 to-transparent transform skew-y-12" />
               
               {/* 深色阴影区域 */}
               <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-titanium-300/30 to-titanium-400/40" />
-                <div className="absolute inset-0 bg-gradient-to-r from-titanium-300/30 via-transparent to-titanium-300/30" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#B8C4BA]/30 to-[#9BA89E]/40" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#B8C4BA]/30 via-transparent to-[#B8C4BA]/30" />
               </div>
             </div>
             
@@ -42,10 +42,10 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="space-y-6"
               >
-                <h1 className="text-5xl md:text-6xl font-bold text-titanium-700 mb-6">
+                <h1 className="text-5xl md:text-6xl font-bold text-[#4A5D4C] mb-6">
                   创造独特的数字体验
                 </h1>
-                <p className="text-xl text-titanium-600">
+                <p className="text-xl text-[#5F6E62]">
                   独立开发者
                 </p>
 
@@ -54,14 +54,14 @@ export default function Home() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 bg-monkey-300 text-white rounded-lg font-medium hover:bg-monkey-400 transition-colors shadow-lg"
+                    className="px-8 py-3 bg-[#89CFF0] text-white rounded-lg font-medium hover:bg-[#5DB8E6] transition-colors shadow-lg"
                   >
                     查看作品集
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 border-2 border-titanium-400 text-titanium-600 rounded-lg font-medium hover:bg-titanium-50/50 transition-colors backdrop-blur-sm"
+                    className="px-8 py-3 border-2 border-[#9BA89E] text-[#5F6E62] rounded-lg font-medium hover:bg-[#F8FAF8]/50 transition-colors backdrop-blur-sm"
                   >
                     了解更多
                   </motion.button>
@@ -79,7 +79,7 @@ export default function Home() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + index * 0.1 }}
-                      className="px-6 py-3 bg-secondary/70 backdrop-blur-sm rounded-full text-base text-titanium-600 border border-titanium-200 shadow-sm hover:bg-white/90 hover:text-titanium-700 transition-all"
+                      className="px-6 py-3 bg-[#F4F6F8]/70 backdrop-blur-sm rounded-full text-base text-[#5F6E62] border border-[#D8E0D9] shadow-sm hover:bg-white/90 hover:text-[#4A5D4C] transition-all"
                     >
                       {item.text}
                     </motion.a>
@@ -93,7 +93,7 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-monkey-400"
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-[#89CFF0]"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

@@ -27,19 +27,19 @@ export default function Navigation() {
 
   return (
     <nav className={`fixed w-full z-50 transition-colors duration-300 ${
-      isScrolled ? 'bg-secondary/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+      isScrolled ? 'bg-[#F4F6F8]/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Logo />
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#works" className="text-titanium-600 hover:text-monkey-400 transition-colors">
+            <a href="#works" className="text-[#5F6E62] hover:text-[#89CFF0] transition-colors">
               作品
             </a>
-            <a href="#about" className="text-titanium-600 hover:text-monkey-400 transition-colors">
+            <a href="#about" className="text-[#5F6E62] hover:text-[#89CFF0] transition-colors">
               关于
             </a>
-            <a href="#contact" className="text-titanium-600 hover:text-monkey-400 transition-colors">
+            <a href="#contact" className="text-[#5F6E62] hover:text-[#89CFF0] transition-colors">
               联系
             </a>
           </div>
