@@ -52,16 +52,16 @@ export default function Home() {
                 {/* CTA 按钮 */}
                 <div className="flex justify-center gap-4 mt-8">
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.05, backgroundColor: '#5DB8E6' }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 bg-[#89CFF0] text-white rounded-lg font-medium hover:bg-[#5DB8E6] transition-colors shadow-lg"
+                    className="px-8 py-3 bg-[#89CFF0] text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-[#89CFF0]/30 hover:shadow-xl"
                   >
                     查看作品集
                   </motion.button>
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.05, borderColor: '#89CFF0', color: '#89CFF0' }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 border-2 border-[#9BA89E] text-[#5F6E62] rounded-lg font-medium hover:bg-[#F8FAF8]/50 transition-colors backdrop-blur-sm"
+                    className="px-8 py-3 border-2 border-[#9BA89E] text-[#5F6E62] rounded-lg font-medium transition-all duration-300 hover:bg-[#F8FAF8]/50 backdrop-blur-sm"
                   >
                     了解更多
                   </motion.button>
@@ -79,7 +79,8 @@ export default function Home() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + index * 0.1 }}
-                      className="px-6 py-3 bg-[#F4F6F8]/70 backdrop-blur-sm rounded-full text-base text-[#5F6E62] border border-[#D8E0D9] shadow-sm hover:bg-white/90 hover:text-[#4A5D4C] transition-all"
+                      whileHover={{ scale: 1.05, backgroundColor: '#89CFF0', color: 'white', borderColor: '#89CFF0' }}
+                      className="px-6 py-3 bg-[#F4F6F8]/70 backdrop-blur-sm rounded-full text-base text-[#5F6E62] border border-[#D8E0D9] shadow-sm transition-all duration-300"
                     >
                       {item.text}
                     </motion.a>
