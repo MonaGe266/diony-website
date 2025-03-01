@@ -14,7 +14,7 @@ export default function Logo() {
           priority
         />
       </div>
-      <span className="text-xl font-bold text-titanium-600 tracking-wider">
+      <span className="text-xl font-bold text-monkey-400 tracking-wider">
         YUN
       </span>
     </Link>
