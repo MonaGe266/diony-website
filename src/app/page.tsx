@@ -52,9 +52,9 @@ export default function Home() {
                 {/* CTA 按钮 */}
                 <div className="flex justify-center gap-4 mt-8">
                   <motion.button
-                    whileHover={{ scale: 1.05, backgroundColor: '#5DB8E6' }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 bg-[#89CFF0] text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-[#89CFF0]/30 hover:shadow-xl"
+                    className="px-8 py-3 bg-[#89CFF0] text-white rounded-lg font-medium transition-all duration-300"
                   >
                     查看作品集
                   </motion.button>
