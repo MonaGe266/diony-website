@@ -62,4 +62,19 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* 垂直文字 */
+.writing-vertical-lr {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+/* 3D 视角 */
+.perspective-[1000px] {
+  perspective: 1000px;
+}
+
+.rotate-x-[10deg] {
+  transform: rotateX(10deg);
 } 

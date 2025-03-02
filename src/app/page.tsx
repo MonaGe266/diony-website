@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Navigation from '@/components/Navigation';
+import Bookshelf from '@/components/Bookshelf';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -101,6 +102,9 @@ export default function Home() {
             </svg>
           </motion.div>
         </section>
+
+        {/* 书架部分 */}
+        <Bookshelf />
       </main>
     </div>
   );
