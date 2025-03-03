@@ -9,16 +9,16 @@ interface Book {
 }
 
 const books: Book[] = [
-  { title: "Cursor入门指南", color: "#89CFF0", link: "/posts/cursor-guide", date: "2024.02" },
-  { title: "Next.js项目搭建", color: "#4A5D4C", link: "/posts/nextjs-setup", date: "2024.02" },
-  { title: "Tailwind使用技巧", color: "#B8C4BA", link: "/posts/tailwind-tips", date: "2024.02" },
-  { title: "Vercel部署实践", color: "#5F6E62", link: "/posts/vercel-deploy", date: "2024.02" },
-  { title: "React Hooks深入", color: "#D8E0D9", link: "/posts/react-hooks", date: "2024.02" },
-  { title: "动画效果开发", color: "#89CFF0", link: "/posts/animation", date: "2024.02" },
-  { title: "响应式设计", color: "#4A5D4C", link: "/posts/responsive", date: "2024.02" },
-  { title: "性能优化笔记", color: "#B8C4BA", link: "/posts/performance", date: "2024.02" },
-  { title: "TypeScript技巧", color: "#5F6E62", link: "/posts/typescript", date: "2024.02" },
-  { title: "组件化思考", color: "#D8E0D9", link: "/posts/components", date: "2024.02" },
+  { title: "Cursor入门指南", color: "rgb(137, 207, 240)", link: "/posts/cursor-guide", date: "2024.02" },
+  { title: "Next.js项目搭建", color: "rgb(74, 93, 76)", link: "/posts/nextjs-setup", date: "2024.02" },
+  { title: "Tailwind使用技巧", color: "rgb(184, 196, 186)", link: "/posts/tailwind-tips", date: "2024.02" },
+  { title: "Vercel部署实践", color: "rgb(95, 110, 98)", link: "/posts/vercel-deploy", date: "2024.02" },
+  { title: "React Hooks深入", color: "rgb(216, 224, 217)", link: "/posts/react-hooks", date: "2024.02" },
+  { title: "动画效果开发", color: "rgb(137, 207, 240)", link: "/posts/animation", date: "2024.02" },
+  { title: "响应式设计", color: "rgb(74, 93, 76)", link: "/posts/responsive", date: "2024.02" },
+  { title: "性能优化笔记", color: "rgb(184, 196, 186)", link: "/posts/performance", date: "2024.02" },
+  { title: "TypeScript技巧", color: "rgb(95, 110, 98)", link: "/posts/typescript", date: "2024.02" },
+  { title: "组件化思考", color: "rgb(216, 224, 217)", link: "/posts/components", date: "2024.02" },
 ];
 
 export default function Bookshelf() {
@@ -55,18 +55,18 @@ export default function Bookshelf() {
                 >
                   {/* 书名 */}
                   <div className="absolute inset-0 flex items-center justify-center p-4">
-                    <span className="text-white font-medium text-sm writing-vertical-lr transform -rotate-180">
+                    <span className="font-medium text-sm writing-vertical-lr transform -rotate-180" style={{ color: 'rgb(255, 255, 255)' }}>
                       {book.title}
                     </span>
                   </div>
                   {/* 日期 */}
-                  <div className="absolute bottom-2 left-2 text-white/80 text-xs writing-vertical-lr transform -rotate-180">
+                  <div className="absolute bottom-2 left-2 text-xs writing-vertical-lr transform -rotate-180" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                     {book.date}
                   </div>
                 </div>
                 
                 {/* 书的侧面 - 只在hover时显示 */}
-                <div className="absolute top-0 right-0 bottom-0 w-4 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform origin-right" />
+                <div className="absolute top-0 right-0 bottom-0 w-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform origin-right" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
               </motion.a>
             ))}
           </div>
