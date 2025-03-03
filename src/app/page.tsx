@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Navigation from '@/components/Navigation';
-import Bookshelf from '@/components/Bookshelf';
+import Navigation from '../components/Navigation';
+import Bookshelf from '../components/Bookshelf';
 import { motion } from 'framer-motion';
 
 export default function Home() {
