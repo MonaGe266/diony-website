@@ -1,133 +1,86 @@
 'use client';
 
-import React from 'react';
-import Navigation from './components/Navigation';
-import Bookshelf from './components/Bookshelf';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import type { FC } from 'react';
+import Navigation from '@/app/components/Navigation';
+import Bookshelf from '@/app/components/Bookshelf';
 
-export default function Home() {
+const Home: FC = () => {
+  useEffect(() => {
+    console.log('Home page loaded');
+  }, []);
+  
   return (
-    <div className="min-h-screen bg-[#E8EDE9]">
+    <div className="min-h-screen bg-[#F4F6F8]">
       <Navigation />
-      <main>
-        {/* Hero Section */}
-        <section className="h-screen relative overflow-hidden">
-          {/* 柔和的背景 */}
-          <div className="absolute inset-0">
-            {/* 基础渐变 */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#F4F6F8] via-[#E8EDE9] to-[#D8E0D9]" />
-            
-            {/* 高光和阴影效果 */}
-            <div className="absolute inset-0">
-              {/* 主要高光区域 */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#F4F6F8]/90 to-transparent transform -skew-x-12" />
-              <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-[#F4F6F8]/80 to-transparent transform skew-y-12" />
-              
-              {/* 深色阴影区域 */}
-              <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#B8C4BA]/30 to-[#9BA89E]/40" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#B8C4BA]/30 via-transparent to-[#B8C4BA]/30" />
-              </div>
-            </div>
-            
-            {/* 细微纹理 */}
-            <div className="absolute inset-0 opacity-[0.07] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxwYXRoIGQ9Ik0xIDFMMiAyTTIgMEwzIDFNMCAyTDEgM00yIDJMMyAzIiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=')]" />
+      
+      {/* Hero Section */}
+      <section className="pt-24 pb-12 md:pt-32 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D3748] mb-6">
+              欢迎来到我的个人空间
+            </h1>
+            <p className="text-xl md:text-2xl text-[#4A5568] max-w-3xl mx-auto">
+              这里是我分享创意、项目和想法的地方
+            </p>
           </div>
-
-          {/* 主要内容 */}
-          <div className="relative h-full flex items-center justify-center backdrop-blur-[1px]">
-            <div className="container mx-auto px-4 text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-6"
-              >
-                <h1 className="text-5xl md:text-6xl font-bold text-[#4A5D4C] mb-6">
-                  创造独特的数字体验
-                </h1>
-                <p className="text-xl text-[#5F6E62]">
-                  独立开发者
-                </p>
-
-                {/* CTA 按钮 */}
-                <div className="flex justify-center gap-4 mt-8">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    style={{ backgroundColor: 'rgb(137, 207, 240)', color: 'rgb(255, 255, 255)' }}
-                    className="px-8 py-3 rounded-lg font-medium transition-all duration-300"
-                  >
-                    查看作品集
-                  </motion.button>
-                  <motion.button
-                    whileHover={{
-                      scale: 1.05,
-                      borderColor: 'rgb(137, 207, 240)',
-                      color: 'rgb(137, 207, 240)'
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    style={{ 
-                      borderWidth: '2px',
-                      borderStyle: 'solid',
-                      borderColor: 'rgb(155, 168, 158)',
-                      color: 'rgb(95, 110, 98)'
-                    }}
-                    className="px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-[#F8FAF8]/50 backdrop-blur-sm"
-                  >
-                    了解更多
-                  </motion.button>
-                </div>
-
-                {/* 标签 */}
-                <div className="flex flex-wrap justify-center gap-4 mt-16">
-                  {[
-                    { text: 'cursor笔记', link: '/notes' },
-                    { text: '我的Youtube', link: '/channel' }
-                  ].map((item, index) => (
-                    <motion.a
-                      key={item.text}
-                      href={item.link}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 + index * 0.1 }}
-                      style={{
-                        backgroundColor: 'rgba(244, 246, 248, 0.7)',
-                        color: 'rgb(95, 110, 98)',
-                        borderColor: 'rgb(216, 224, 217)'
-                      }}
-                      whileHover={{
-                        scale: 1.05,
-                        backgroundColor: 'rgb(137, 207, 240)',
-                        color: 'rgb(255, 255, 255)',
-                        borderColor: 'rgb(137, 207, 240)'
-                      }}
-                      className="px-6 py-3 backdrop-blur-sm rounded-full text-base border shadow-sm transition-all duration-300"
-                    >
-                      {item.text}
-                    </motion.a>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
+        </div>
+      </section>
+      
+      {/* Featured Works Section */}
+      <section id="works" className="py-12 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2D3748] mb-12">
+            精选作品
+          </h2>
+          <Bookshelf />
+        </div>
+      </section>
+      
+      {/* About Section */}
+      <section id="about" className="py-12 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2D3748] mb-6">
+              关于我
+            </h2>
+            <p className="text-lg text-[#4A5568] mb-6">
+              我是一名热爱创造和分享的开发者，专注于打造美观且实用的数字体验。
+            </p>
+            <p className="text-lg text-[#4A5568]">
+              通过这个网站，我希望能够展示我的项目作品，分享我的学习笔记和经验。
+            </p>
           </div>
-
-          {/* 向下滚动提示 */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            style={{ color: 'rgb(137, 207, 240)' }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        </div>
+      </section>
+      
+      {/* Contact Section */}
+      <section id="contact" className="py-12 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2D3748] mb-6">
+            联系我
+          </h2>
+          <p className="text-lg text-[#4A5568] mb-8">
+            如果您有任何问题或合作意向，欢迎随时联系我
+          </p>
+          <a 
+            href="mailto:contact@example.com" 
+            className="inline-block bg-[#89CFF0] hover:bg-[#5DADE2] text-white font-medium py-3 px-6 rounded-lg transition-colors"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </motion.div>
-        </section>
-
-        {/* 书架部分 */}
-        <Bookshelf />
-      </main>
+            发送邮件
+          </a>
+        </div>
+      </section>
+      
+      {/* Footer */}
+      <footer className="bg-[#2D3748] text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p>© {new Date().getFullYear()} 个人作品集. 保留所有权利.</p>
+        </div>
+      </footer>
     </div>
   );
-} 
+}
+
+export default Home; 

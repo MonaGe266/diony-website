@@ -8,8 +8,7 @@ const nextConfig = {
     unoptimized: true,
   },
   webpack: (config) => {
-    config.resolve.alias['@'] = path.join(__dirname, 'src');
-    config.resolve.alias['@/components'] = path.join(__dirname, 'src/app/components');
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     return config;
   }
 }
