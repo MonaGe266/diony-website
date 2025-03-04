@@ -2,8 +2,8 @@
 
 import React, { useEffect } from 'react';
 import type { FC } from 'react';
-import Navigation from '@/app/components/Navigation';
-import Bookshelf from '@/app/components/Bookshelf';
+import Navigation from '@/components/Navigation';
+import Bookshelf from '@/components/Bookshelf';
 
 const Home: FC = () => {
   useEffect(() => {
