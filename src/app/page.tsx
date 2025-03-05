@@ -2,8 +2,8 @@
 
 import React from 'react';
 import type { FC } from 'react';
-import Navigation from '../components/Navigation';
-import Bookshelf from '../components/Bookshelf';
+import Navigation from './components/Navigation';
+import Bookshelf from './components/Bookshelf';
 
 const Home: FC = () => {
   console.log('Testing with Navigation component');
